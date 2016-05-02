@@ -17,10 +17,10 @@ class RomanNumerals
   ]
 
   def initialize(numeric)
-    @value = numeric
+    @value = numeric.to_i
   end
 
-  def is_valid
+  def valid?
     # Make sure that the number is between 0 and 4000 and that it is a valid number, as per the caveats
     if @value > 0 && @value < 4000
       if @value.is_a? Fixnum
